@@ -1,0 +1,12 @@
+<div class='gallery' ng-show="product.images.length">
+	<img ng-src="app/img/{{product.images[gallery.current].full}}" class="center-block"/>
+	<div class="center-block  text-center">
+		<ul class="list-inline thumbs">
+			<li class="thumbnail" ng-repeat="image in product.images"  class="center-block">
+				<a href ng-click="gallery.setCurrent($index)">
+					<img ng-src="app/img/{{image.thumb}}"/>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
