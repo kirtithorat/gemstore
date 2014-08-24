@@ -1,38 +1,31 @@
 'use strict';
 
-(function() {
-    var app = angular.module('gemstoreAppDirectives', []);
-
-    // Here camelCase..in HTML with dash like product-title
-    app.directive('productTitle', function() {
+angular.module('gemstoreAppDirectives', [])
+    .directive('productTitle', function() {
         return { // returns a directive definition object
             restrict: 'E', // type of directive, E for element, A for attribute
             templateUrl: 'app/partials/product-title.html'
         };
-    });
-
-    app.directive('productDescription', function() {
+    })
+    .directive('productDescription', function() {
         return {
             restrict: 'E',
             templateUrl: 'app/partials/product-description.html'
         };
-    });
-
-    app.directive("productReviews", function() {
+    })
+    .directive("productReviews", function() {
         return {
             restrict: 'E',
             templateUrl: "app/partials/product-reviews.html"
         };
-    });
-
-    app.directive("productSpecs", function() {
+    })
+    .directive("productSpecs", function() {
         return {
             restrict: 'A',
             templateUrl: 'app/partials/product-specs.html'
         };
-    });
-
-    app.directive("productGallery", function() {
+    })
+    .directive("productGallery", function() {
         return {
             restrict: "E",
             templateUrl: "app/partials/product-gallery.html",
@@ -44,9 +37,8 @@
             },
             controllerAs: 'gallery'
         };
-    });
-
-    app.directive("productTabs", function() {
+    })
+    .directive("productTabs", function() {
         return {
             restrict: 'E',
             templateUrl: 'app/partials/product-tabs.html',
@@ -64,5 +56,3 @@
             controllerAs: 'tab'
         };
     });
-
-})();

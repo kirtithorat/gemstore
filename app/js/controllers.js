@@ -1,7 +1,7 @@
-(function() {
-    var app = angular.module('gemstoreAppControllers', []);
+'use strict';
 
-    app.controller("StoreController", function($http) {
+angular.module('gemstoreAppControllers', [])
+    .controller("StoreController", function($http) {
         // Fetch data from API instead
         // var store = this;
         // store.products = [];
@@ -99,9 +99,7 @@
                 createdOn: 1397490980837
             }]
         }];
-    });
-
-    app.controller('ReviewController', function() {
+    }).controller('ReviewController', function() {
         this.review = {};
         this.addReview = function(product) {
             this.review.createdOn = Date.now();
@@ -109,4 +107,3 @@
             this.review = {};
         };
     });
-})();
